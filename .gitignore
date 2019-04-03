@@ -1,3 +1,5 @@
 /nbproject/private/
 *.ttf
 *.otf
+*.URL
+/lib/*.URL
