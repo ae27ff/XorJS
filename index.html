@@ -11,14 +11,23 @@
 		<script src="lib/data/FileWindow.js?v=0.1"></script>
 		<script src="lib/data/ChunkedWindow.js?v=0.1"></script>
 		<script src="lib/xor/ChunkedXorProcessor.js?v=0.1"></script>
+                
+                
+		<script src="lib/ui/InputEntry.js?v=0.1"></script>
+		<script src="lib/ui/FileEntry.js?v=0.1"></script>
+		<script src="lib/ui/GeneratorEntry.js?v=0.1"></script>
+		<script src="lib/ui/ConstantGeneratorEntry.js?v=0.1"></script>
+		<script src="lib/ui/UI.js?v=0.1"></script>
+                
+                
 		<script src="lib/scripts.js"></script>
 	</head>
-	<body>
+	<body><!--
  <div class="jumbotron text-center">
   <h1>My First Bootstrap Page</h1>
   <p>Resize this responsive page to see the effect!</p>
 </div>
-
+-->
 <div class="container">
   <h2>XorJS</h2>
 </div>
@@ -28,85 +37,21 @@
   <li class="nav-item dropdown mr-2">
     <a class="nav-link dropdown-toggle bg-success text-white" data-toggle="dropdown" href="#">+ Add Data</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">File ...</a>
-      <a class="dropdown-item" href="#">Generator: Constant Bytes</a>
+      <a class="dropdown-item" href="#" onclick="UI.addFile()">File ...</a>
+      <a class="dropdown-item" href="#" onclick="UI.addConstantGenerator()">Generator: Constant Bytes</a>
     </div>
   </li>
   <li class="nav-item">
-    <a class="nav-link bg-danger text-white" href="#">- Clear Data</a>
+    <a class="nav-link bg-danger text-white" href="#" onclick="UI.clearEntries()">- Clear Data</a>
   </li>
 </ul> 
     <hr>
-<div id="inputs">
-<div class="shadow-lg p-2 mb-2 bg-light">
-<div class="accordion" id="accordionExample">
-    <div class="mb-1" data-toggle="collapse" data-target="#collapseOne" >
-        <button type="button" class="btn btn-m border bg-white" aria-label="Close">&times;</button>
-        <button type="button" class="btn">Generator: Constant Bytes</button>
-    </div>
-    <div id="collapseOne" class="collapse show bg-white" data-parent="#accordionExample">
-      <div class="card-body">
-
-<form>
-  <div class="form-group row">
-    <label class="col col-sm-1">Generator Input</label>
-    <div class="col col-sm-3">
-      <input type="number" class="form-control" value="0" max="255" min="0">
-    </div>
-  </div>
-  <div class="form-group row bg-light">
-      <h6 class="">Select Data Range</h6>
-  </div>
-  <div class="form-group row">
-    <label class="col col-sm-1">Start Offset</label>
-    <div class="col col-sm-3">
-      <input type="number" class="form-control" value="0" max="4294967295" min="0">
-    </div>
-    <label class="col col-sm-1">End Offset</label>
-    <div class="col col-sm-3">
-      <input type="number" class="form-control" value="4294967295" max="4294967295" min="0">
-    </div>
-    <button type="button" class="btn btn-secondary form-control col col-sm-2">Set Length...</button>
-  </div>
-    <div class="progress form-group row">
-      <div class="progress-bar bg-transparent" style="width:20%"></div>
-      <div class="progress-bar" style="width:40%"></div>
-      <div class="progress-bar bg-transparent" style="width:40%"></div>
-    </div>
-</form>
-          
-          
-      </div>
-    </div>
-</div>
-</div>
-    
-<div class="shadow-lg p-2 mb-2 bg-light">
-<div class="accordion" id="accordionExample">
-    <div class="mb-1" data-toggle="collapse" data-target="#collapseOne" >
-        <button type="button" class="btn btn-m border bg-white" aria-label="Close">&times;</button>
-        <button type="button" class="btn">File: stuff.txt</button>
-    </div>
-    <div id="collapseOne" class="collapse show bg-white" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-</div>
-</div>
-    
-    
-    
-  <div class="shadow-lg p-2 mb-2 bg-light">Example Entry</div>
-  <div class="shadow-lg p-2 mb-2 bg-light">Example Entry</div>
-  <div class="shadow-lg p-2 mb-2 bg-light">Example Entry</div>
-  <div class="shadow-lg p-2 mb-2 bg-light">Example Entry</div>
-  <div class="shadow-lg p-2 mb-2 bg-light">Example Entry</div>
+<div id="ui-entry-container" style="min-height:200px;">
 </div>
     <hr>
     stats
 </div>
 
-                  <input type="file" id="f1" multiple>
+        <input type="file" id="ui-addfile-trigger" multiple="" style="display:none;">
 	</body>
 </html>
