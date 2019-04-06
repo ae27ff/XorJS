@@ -13,7 +13,9 @@
 		<script src="lib/xor/ChunkedXorProcessor.js?v=0.1"></script>
                 
                 
+		<script src="lib/ui/DataEntry.js?v=0.1"></script>
 		<script src="lib/ui/InputEntry.js?v=0.1"></script>
+		<script src="lib/ui/OutputEntry.js?v=0.1"></script>
 		<script src="lib/ui/FileEntry.js?v=0.1"></script>
 		<script src="lib/ui/GeneratorEntry.js?v=0.1"></script>
 		<script src="lib/ui/ConstantGeneratorEntry.js?v=0.1"></script>
@@ -31,9 +33,8 @@
 <div class="container">
   <h2>XorJS</h2>
 </div>
-
-<div class="container border p-2">
- <ul class="nav nav-pills">
+<div id="ui-container" class="container border p-2">
+ <ul id="ui-nav" class="nav nav-pills">
   <li class="nav-item dropdown mr-2">
     <a class="nav-link dropdown-toggle bg-success text-white" data-toggle="dropdown" href="#">+ Add Data</a>
     <div class="dropdown-menu">
@@ -45,13 +46,11 @@
     <a class="nav-link bg-danger text-white" href="#" onclick="UI.clearEntries()">- Clear Data</a>
   </li>
 </ul> 
-    <hr>
-<div id="ui-entry-container" style="min-height:200px;">
+<hr>
+<div id="ui-entry-container" class="p-2" style="min-height:200px;"></div>
+<hr>    
+<div id="ui-output-container"></div>
 </div>
-    <hr>
-    stats
-</div>
-
-        <input type="file" id="ui-addfile-trigger" multiple="" style="display:none;">
-	</body>
+<input type="file" id="ui-addfile-trigger" multiple="" style="display:none;">
+</body>
 </html>

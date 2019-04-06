@@ -9,8 +9,10 @@
 */
 
 
-
-.welxl{
-    background-color:gray;
-    border-style: solid;
+#ui-entry-container{
+    min-height:200px;
+    background-image: url('images/addfiles.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: whitesmoke;
 }
