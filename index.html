@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-                <link rel="stylesheet" type="text/css" href="style.css" />
-		<script src="js/jquery-3.2.1.min.js"></script>
-		<script src="js/bootstrap.bundle.js"></script>
+                <title>XorJS</title>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="lib/ui/style.css" />
+		<script src="lib/bootstrap/js/jquery-3.2.1.min.js"></script>
+		<script src="lib/bootstrap/js/bootstrap.bundle.js"></script>
+		<script src="lib/util/compatibility.js"></script>
 		<script src="lib/data/DataWindow.js?v=0.1"></script>
 		<script src="lib/data/GeneratorWindow.js?v=0.1"></script>
 		<script src="lib/data/FileWindow.js?v=0.1"></script>
@@ -20,9 +22,6 @@
 		<script src="lib/ui/GeneratorEntry.js?v=0.1"></script>
 		<script src="lib/ui/ConstantGeneratorEntry.js?v=0.1"></script>
 		<script src="lib/ui/UI.js?v=0.1"></script>
-                
-                
-		<script src="lib/scripts.js"></script>
 	</head>
 	<body><!--
  <div class="jumbotron text-center">
@@ -31,7 +30,31 @@
 </div>
 -->
 <div class="container">
-  <h2>XorJS</h2>
+    <h2>XorJS <small>v0.1-alpha (experimental) - Multi-file Binary XOR Utility</small></h2>
+  <!-- The Modal -->
+  <div class="modal" id="compatModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Browser Compatibility Warning</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+            This tool relies on newer javascript features (ES2017) which your browser does not support.<br>It may not function correctly.
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal" data-target="#compatModal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </div>
 <div id="ui-container" class="container border p-2">
  <ul id="ui-nav" class="nav nav-pills">
@@ -52,5 +75,10 @@
 <div id="ui-output-container"></div>
 </div>
 <input type="file" id="ui-addfile-trigger" multiple="" style="display:none;">
+
+
+
+
+
 </body>
 </html>
