@@ -21,11 +21,12 @@
 		<script src="lib/ui/FileEntry.js?v=0.1"></script>
 		<script src="lib/ui/GeneratorEntry.js?v=0.1.5"></script>
 		<script src="lib/ui/ConstantGeneratorEntry.js?v=0.1"></script>
-		<script src="lib/ui/UI.js?v=0.1.4"></script>
+		<script src="lib/ui/RandomGeneratorEntry.js?v=0.2"></script>
+		<script src="lib/ui/UI.js?v=0.2"></script>
 	</head>
 	<body>
 <div class="container">
-    <h2>XorJS <small>v0.1-alpha (experimental) - Multi-file Binary XOR Utility</small></h2>
+    <h2>XorJS <small>v0.2-alpha (experimental) - Multi-file Binary XOR Utility</small></h2>
   <!-- The Modal -->
   <div class="modal" id="compatModal">
     <div class="modal-dialog">
@@ -58,6 +59,7 @@
     <div class="dropdown-menu">
       <a class="dropdown-item" onclick="UI.addFile()">File ...</a>
       <a class="dropdown-item" onclick="UI.addConstantGenerator()">Generator: Constant Bytes</a>
+      <a class="dropdown-item" onclick="UI.addRandomGenerator()">Generator: Random Bytes</a>
     </div>
   </li>
   <li class="nav-item">
