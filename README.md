@@ -1,4 +1,4 @@
 # XorJS
 In-browser multi-file binary XOR utility inspired by XorJ
 
-Live demo: http://ae27ff.github.io/xorjs/
+Live demo: https://ae27ff.github.io/XorJS/
